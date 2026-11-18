@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Sidebar Active States */
+.nav-item.active {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+}
+
+.nav-item.active svg {
+  color: #14b8a6 !important;
+}
+
+/* Stepper tab active states */
+.step-tab.active {
+  color: #0f766e !important;
+  font-weight: 700;
+  background-color: #f0fdfa;
+}
+
+.step-tab.active .step-circle {
+  background-color: #0d9488 !important;
+  color: #ffffff !important;
+}
+
+.step-tab.completed .step-circle {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+/* Row selection state */
+tr.selected-row {
+  background-color: #f0fdfa !important;
+}
+
+.backdrop-blur-xs {
+  backdrop-filter: blur(2px);
+}
